@@ -206,7 +206,6 @@ export default class TimeGrid extends Component {
           <TimeColumn
             {...this.props}
             showLabels
-            style={{ width }}
             ref={gutterRef}
             className="rbc-time-gutter"
           />
@@ -286,12 +285,12 @@ export default class TimeGrid extends Component {
         style={style}
       >
         <div className="rbc-row">
-          <div className="rbc-label rbc-header-gutter" style={{ width }} />
+          <div className="rbc-label rbc-header-gutter" />
           {this.renderHeaderCells(range)}
         </div>
         {resources && (
           <div className="rbc-row rbc-row-resource">
-            <div className="rbc-label rbc-header-gutter" style={{ width }} />
+            <div className="rbc-label rbc-header-gutter" />
             {headerRendered}
           </div>
         )}
@@ -299,7 +298,6 @@ export default class TimeGrid extends Component {
           <div
             ref={ref => (this._gutters[0] = ref)}
             className="rbc-label rbc-header-gutter"
-            style={{ width }}
           >
             {message(messages).allDay}
           </div>
